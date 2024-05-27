@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const primaryColor = "#2ecc71"; // Better primary color
+const primaryColor = "#2AAA8A"; // Better primary color
 
 export const ButtonContainer = styled.div`
   display: flex;

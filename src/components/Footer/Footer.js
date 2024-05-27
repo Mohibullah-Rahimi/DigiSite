@@ -1,18 +1,8 @@
-import React, {useContext} from "react";
-import {
-  FooterContainer,
-  FooterSection,
-  StyledAttrition,
-  StyledExternalLink,
-  StyledFooter,
-  StyledHeading,
-  FooterLogo,
-  StyledSpan,
-} from "./style";
+import React, { useContext } from "react";
+import { FooterContainer, FooterSection, StyledAttrition, StyledExternalLink, StyledFooter, StyledHeading, FooterLogo, StyledSpan, NavLink } from "./style";
 import { Center } from "../App/style";
 import { social } from "./footerdata";
 import { links } from "../Navbar/data";
-import { NavLink } from "./style";
 import { CartContext } from "../../Contexts/CartContext";
 import { getYear } from "../../utility/utils";
 
@@ -31,11 +21,9 @@ function Footer() {
               return (
                 <NavLink to={url} key={index}>
                   {text} {icon}
-                  {text === "Cart" && totalNumCartItems > 0 ? (
-                    <StyledSpan>
-                      {totalNumCartItems > 0 ? totalNumCartItems : null}
-                    </StyledSpan>
-                  ) : null}
+                  {text === "Cart" && totalNumCartItems > 0 && ( // Check if cart has items
+                    <StyledSpan>{totalNumCartItems}</StyledSpan>
+                  )}
                 </NavLink>
               );
             })}
@@ -48,8 +36,9 @@ function Footer() {
                 <a
                   href={url}
                   target="_blank"
-                  rel="noreferrer noopener"
-                  key={index}>
+                  rel="noopener noreferrer"
+                  key={index}
+                >
                   {icon}
                 </a>
               );
@@ -60,7 +49,9 @@ function Footer() {
           &copy; {getYear()} Website created by:{" "}
           <StyledExternalLink
             href="https://www.linkedin.com/in/rahimi2020/"
-            target="_blank noreferrer noopener">
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Mohibullah Rahimi
           </StyledExternalLink>
         </StyledAttrition>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
-const greenColor = "#2ecc71"; // Great shade of green
+const greenColor = "#2AAA8A"; // Great shade of green
 
 export const ButtonLink = styled(Link)`
   display: flex;

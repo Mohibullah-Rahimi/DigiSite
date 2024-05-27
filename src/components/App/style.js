@@ -60,7 +60,7 @@ export const StyledHeading = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #2ecc71; /* Green Color */
+  background: #2AAA8A; /* Green Color */
   color: white;
   font-size: 2rem;
 `;

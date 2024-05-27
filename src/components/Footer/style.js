@@ -1,26 +1,26 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
- import { FiInstagram, FiTwitter } from "react-icons/fi";
+import { FiInstagram, FiTwitter } from "react-icons/fi";
 
 export const StyledFooter = styled.footer`
-  background: #800020;
+  background: #2AAA8A; /* Changed to a green shade */
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0; /* Increased padding for better spacing */
   text-align: center;
 `;
 
 export const FooterContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 
-    @media all and (min-width: 992px){
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const FooterSection = styled.section`
@@ -28,30 +28,32 @@ export const FooterSection = styled.section`
   flex-direction: column;
   gap: 1rem;
 
-  @media all and (min-width: 992px){
-      flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: column;
   }
 `;
 
 export const StyledHeading = styled.h3`
-    color: white;
+  color: white;
+  font-size: 1.5rem; /* Increased font size for better readability */
+  margin-bottom: 1rem;
 `;
 
 export const NavLink = styled(Link)`
-  color: snow;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem;
-  gap: 0.25rem;
-  font-size: 1.1rem;
+  padding: 0.5rem; /* Increased padding for better spacing */
+  gap: 0.5rem;
+  font-size: 1.2rem; /* Increased font size for better readability */
   position: relative;
 
   &:hover {
     text-decoration: underline;
-    text-decoration-color: orange;
+    text-decoration-color: #ff9800; /* Changed to a brighter orange */
     text-decoration-thickness: 3px;
     text-decoration-style: wavy;
     text-underline-offset: 0.1rem;
@@ -59,12 +61,12 @@ export const NavLink = styled(Link)`
 `;
 
 export const StyledInstagram = styled(FiInstagram)`
-    color: white;
-    font-size: 2rem;
+  color: white;
+  font-size: 2rem;
 
-    &:hover {
-        color: orange;
-    }
+  &:hover {
+    color: #ff9800; /* Changed to a brighter orange */
+  }
 `;
 
 export const StyledTwitter = styled(FiTwitter)`
@@ -72,15 +74,16 @@ export const StyledTwitter = styled(FiTwitter)`
   font-size: 2rem;
 
   &:hover {
-    color: orange;
+    color: #ff9800; /* Changed to a brighter orange */
   }
 `;
 
 export const StyledAttrition = styled.small`
-    text-align: center;
-    margin-top: 1rem;
-    display: block;
-    padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  display: block;
+  padding: 1rem;
+  color: lightgray; /* Changed to light gray for better visibility */
 `;
 
 export const StyledExternalLink = styled.a`
@@ -89,7 +92,7 @@ export const StyledExternalLink = styled.a`
 
   &:hover {
     text-decoration: underline;
-    text-decoration-color: orange;
+    text-decoration-color: #ff9800; /* Changed to a brighter orange */
     text-decoration-thickness: 3px;
     text-decoration-style: wavy;
     text-underline-offset: 0.1rem;
@@ -107,11 +110,13 @@ export const FooterLogo = styled.p`
 export const StyledSpan = styled.span`
   position: absolute;
   background: white;
-  color: #800020;
-  padding: 0 0.1rem;
+  color: #004d40; /* Changed to match the new green shade */
+  padding: 0 0.2rem;
   right: -0px;
   bottom: 55%;
   font-weight: bold;
   right: 50%;
   transform: translateX(35px);
+  border-radius: 0.2rem; /* Added border-radius for a smoother look */
+  font-size: 1rem; /* Adjusted font size for better readability */
 `;

@@ -85,7 +85,7 @@ export const CountButton = styled.button`
     height: 2rem;
     margin: 1rem;
     border: none;
-    background: #800020;
+    background: #2AAA8A;
     color: white;
     cursor: pointer;
 
