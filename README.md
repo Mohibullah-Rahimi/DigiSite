@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 1st & Third
 
 ## Table of Concepts
@@ -151,3 +152,7 @@ To build the app in production mode type:
 ## Author
 
 - Personal Portfolio: [https://natashajohnson.dev/](https://natashajohnson.dev/)
+=======
+# e-commerce-Website
+A custom e-commerce website built as a cost-effective alternative to platforms like Shopify. The site utilizes the GROQ query language to fetch products from Sanity, handles payments through Stripe, and processes contact form submissions via Formspree.
+>>>>>>> b54cf53980b3f659da75f184141f31468fb28b97

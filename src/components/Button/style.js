@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
+const greenColor = "#2ecc71"; // Great shade of green
+
 export const ButtonLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #800020;
+  background: ${greenColor};
   border: 1px solid transparent;
   color: white;
   padding: 0.75rem;
@@ -22,35 +24,38 @@ export const ButtonLink = styled(Link)`
   }
 `;
 
-export const SecondaryButton = styled.button`
+const buttonStyles = `
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   padding: 0.75rem;
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
   align-self: center;
   text-decoration: none;
+`;
+
+export const SecondaryButton = styled.button`
+  ${buttonStyles}
   background: transparent;
-  border: 2px solid #800020;
-  color: #800020;
+  border: 2px solid ${greenColor};
+  color: ${greenColor};
 
   &:hover {
-    background: #800020;
+    background: ${greenColor};
     color: white;
   }
 `;
 
 export const PrimaryButton = styled(SecondaryButton)`
-  background: #800020;
+  background: ${greenColor};
   color: white;
 
   &:hover {
     background: white;
-    color: #800020;
-    border: 3px solid #800020;
+    color: ${greenColor};
+    border: 3px solid ${greenColor};
   }
 
   &:disabled {
@@ -75,24 +80,24 @@ export const ToggleButton = styled.button`
 
 export const SecondaryLink = styled(ButtonLink)`
   background: transparent;
-  border: 2px solid #800020;
-  color: #800020;
+  border: 2px solid ${greenColor};
+  color: ${greenColor};
 
   &:hover {
-    background: #800020;
+    background: ${greenColor};
     color: white;
     transform: scale(1);
-    border: 2px solid #800020;
+    border: 2px solid ${greenColor};
     transition: none;
   }
 `;
 
 export const PrimaryLink = styled(SecondaryLink)`
-  background: #800020;
+  background: ${greenColor};
   color: white;
 
   &:hover {
     background: transparent;
-    color: #800020;
+    color: ${greenColor};
   }
 `;
