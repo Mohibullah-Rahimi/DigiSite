@@ -8,37 +8,38 @@ import {
 } from "./style";
 import { CartContext } from "../../Contexts/CartContext";
 
-const CartProduct = (product) => {
-  const { cart, handleAddToCart, decreaseCartCount, removeItemFromCart } =
-    useContext(CartContext);
+const CartProduct = ({ product }) => {
+  const { handleAddToCart, decreaseCartCount, removeItemFromCart } = useContext(
+    CartContext
+  );
 
   return (
     <StyledArticle>
       <ImageWrapper>
         <img
-          src={product.product.details.image}
-          alt={product.product.details.title}></img>
+          src={product.details.image}
+          alt={product.details.title}
+          style={{ maxWidth: "100%", height: "auto" }} // Apply image styles
+        />
       </ImageWrapper>
 
       <StyledDetails>
-        <span>{product.product.details.title}</span>
+        <span>{product.details.title}</span>
 
         <div>
-          <CountButton
-            onClick={() => decreaseCartCount(product.product.details.id)}>
+          <CountButton onClick={() => decreaseCartCount(product.details.id)}>
             -
           </CountButton>
-          <span>Qty. {product.product.quantity}</span>
-          <CountButton
-            onClick={() => handleAddToCart(product.product.details.id)}>
+          <span>Qty. {product.quantity}</span>
+          <CountButton onClick={() => handleAddToCart(product.details.id)}>
             +
           </CountButton>
         </div>
 
-        <span>${product.product.details.price}</span>
+        <span>${product.details.price}</span>
       </StyledDetails>
-      <RemoveButton
-        onClick={() => removeItemFromCart(product.product.details.id)}>
+
+      <RemoveButton onClick={() => removeItemFromCart(product.details.id)}>
         Remove Item
       </RemoveButton>
     </StyledArticle>
