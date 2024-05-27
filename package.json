@@ -31,7 +31,7 @@
     ]
   },
   "browser": {
-    "fs":false
+    "fs": false
   },
   "browserslist": {
     "production": [
@@ -44,5 +44,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- [Overview](#overview)\r     - [Images](#images)\r     - [Links](#links)\r - [My Process](#my-process)\r     - [Built With](#built-with)\r     - [Challenges](#challenges)\r     - [What I learned](#What-i-learned)\r     - [Continued Development](#continued-development)\r     - [Instructions](#instructions)\r - [Author](#author)",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

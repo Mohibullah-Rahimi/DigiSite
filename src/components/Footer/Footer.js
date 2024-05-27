@@ -59,9 +59,9 @@ function Footer() {
         <StyledAttrition>
           &copy; {getYear()} Website created by:{" "}
           <StyledExternalLink
-            href="https://natashajohnson.dev/"
+            href="https://www.linkedin.com/in/rahimi2020/"
             target="_blank noreferrer noopener">
-            Natasha Johnson
+            Mohibullah Rahimi
           </StyledExternalLink>
         </StyledAttrition>
       </Center>
