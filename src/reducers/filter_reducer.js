@@ -52,11 +52,10 @@ const filter_reducer = (state, action) => {
     let copyOfSelectedPrices = [...selected_prices];
     copyOfIsChecked[index] = !isChecked[index];
 
-    //if price has been checked
     if (copyOfIsChecked[index]) {
       copyOfSelectedPrices.push(value);
     }
-    //if price has been unchecked
+  
     if (!copyOfIsChecked[index]) {
       if (copyOfSelectedPrices.includes(value)) {
         copyOfSelectedPrices = copyOfSelectedPrices.filter((price) => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { StyledForm, InputContainer, FormButton } from "./style";
-import { PrimaryButton } from "../Button/style";
 import FormInput from "../FormInput/FormInput";
 
 function Form() {
@@ -9,6 +8,7 @@ function Form() {
     emailInput: "",
     messageInput: "",
   });
+
   const [errors, setErrors] = useState({
     nameError: "",
     emailError: "",
@@ -16,45 +16,51 @@ function Form() {
   });
 
   const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
+    const { name, value } = e.target;
     setFormFields({
       ...formFields,
       [name]: value,
     });
   };
 
-  const handleSubmit = () => {
-    const status = validate();
-    if (status) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      // Handle form submission (e.g., send data to the server)
+      console.log("Form submitted successfully:", formFields);
       resetForm();
     }
   };
 
   const validate = () => {
-    let nameErr, emailErr, messageErr;
-    let status;
+    let nameErr = "";
+    let emailErr = "";
+    let messageErr = "";
+    let status = true;
 
-    if (nameInput.trim() === "" || nameInput.match(/\d/)) {
+    if (formFields.nameInput.trim() === "" || /\d/.test(formFields.nameInput)) {
       nameErr = "Enter a valid name";
       status = false;
     }
     if (
-      emailInput.trim() === "" ||
-      !emailInput.match(/^([a-z\d\.-_]+)@([a-z\d\.-_]+)\.([a-z]{2,})$/)
+      formFields.emailInput.trim() === "" ||
+      !/^([a-z\d._%+-]+)@([a-z\d.-]+)\.([a-z]{2,})$/i.test(formFields.emailInput)
     ) {
       emailErr = "Enter a valid email";
       status = false;
     }
-    if (messageInput.trim() === "") {
+    if (formFields.messageInput.trim() === "") {
       messageErr = "Message cannot be blank";
       status = false;
     }
+
     setErrors({
       nameError: nameErr,
       emailError: emailErr,
       messageError: messageErr,
     });
+
+    return status;
   };
 
   const resetForm = () => {
@@ -74,7 +80,7 @@ function Form() {
   const { nameError, emailError, messageError } = errors;
 
   return (
-    <StyledForm action="https://formspree.io/f/mvolbzdo" method="POST">
+    <StyledForm onSubmit={handleSubmit} action="https://formspree.io/f/mvolbzdo" method="POST">
       <h3>Send Us A Message!</h3>
       <InputContainer>
         <FormInput
@@ -87,7 +93,7 @@ function Form() {
           onChange={handleInput}
           required
         />
-        <span>{nameError}</span>
+        {nameError && <span className="error">{nameError}</span>}
       </InputContainer>
       <InputContainer>
         <FormInput
@@ -100,7 +106,7 @@ function Form() {
           onChange={handleInput}
           required
         />
-        <span>{emailError}</span>
+        {emailError && <span className="error">{emailError}</span>}
       </InputContainer>
       <InputContainer>
         <label htmlFor="message">Message</label>
@@ -112,9 +118,9 @@ function Form() {
           value={messageInput}
           onChange={handleInput}
           required></textarea>
-        <span>{messageError}</span>
+        {messageError && <span className="error">{messageError}</span>}
       </InputContainer>
-      <FormButton type="submit" onClick={handleSubmit}>
+      <FormButton type="submit">
         Send Message
       </FormButton>
     </StyledForm>

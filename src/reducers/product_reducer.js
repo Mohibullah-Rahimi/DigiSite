@@ -1,27 +1,16 @@
-
-const products_reducer = (state, action) => {
-    //mobile menu toggle
-    if (action.type === "TOGGLE_MENU") {
-        return { ...state, openMenu: !state.openMenu };
+const productsReducer = (state, action) => {
+    switch (action.type) {
+        case "TOGGLE_MENU":
+            return { ...state, openMenu: !state.openMenu };
+        case "SHOW_LOADING":
+            return { ...state, loading: true };
+        case "GET_PRODUCTS":
+            return { ...state, loading: false, products: action.payload };
+        case "GET_SINGLE_PRODUCT":
+            return { ...state, loading: false, singleProduct: { ...action.payload.singleProduct } };
+        default:
+            throw new Error(`No Matching "${action.type}" - action type`);
     }
+};
 
-    //show loading
-    if (action.type === "SHOW_LOADING") {
-        return { ...state, loading: true };
-    }
-
-    //get products
-    if (action.type === "GET_PRODUCTS") {
-        return { ...state, loading: false, products: action.payload };
-    }
-
-    //get single product
-    if (action.type === "GET_SINGLE_PRODUCT") {
-      const { singleProduct } = action.payload;
-      return { ...state, loading: false, singleProduct: { ...action.payload } };
-    }
-
-    throw new Error(`No Matching "${action.type}" - action type`);
-}
-
-export default products_reducer;
+export default productsReducer;

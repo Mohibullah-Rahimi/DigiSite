@@ -10,7 +10,7 @@ function Header() {
     <StyledHeader>
       <Container>
         <SubContainer>
-          <StyledLogo>1st & Third</StyledLogo>
+          <StyledLogo>DigiSite</StyledLogo>
           <Hamburger />
         </SubContainer>
         <Navbar />

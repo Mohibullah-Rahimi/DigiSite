@@ -42,7 +42,7 @@ export const SubContainer = styled.div`
 `;
 
 export const StyledLogo = styled.h1`
-  color: #800020;
+  color: #2AAA8A;
 `;
 
 
