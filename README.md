@@ -1,4 +1,40 @@
+Full job description
+Are you a tech guru that thrives when working with a team? We need someone that can execute expert level problem solving using critical thinking methodology. We are looking for someone that can think outside the box. Someone that can improve existing workflows and create new ones. Already an expert in Microsoft 0365 business applications? That’s what we are looking for! Someone with a blackbelt solving complex problems, providing exceptional end user support, and experience handling projects. You'll be a vital part of our team, handling diverse responsibilities and driving ZTERS technology initiatives forward. If you're ready to take on new challenges and make a significant impact, we want to hear from you!
 
+Traits we are looking for to Join ZTERS!
+
+A passion for your craft and dedication to improvement.
+Learning is one of your strongest motivators.
+Positive attitude when working with people.
+Bring high energy and excitement every day.
+Creative and challenges conventional thinking.
+Dedicated to finding the best and most efficient solutions to problems.
+Value’s punctuality and consistency, arriving on time and being dependable.
+Your Toolbox
+
+Can meet deadlines for work assigned using project management platform
+Strong understanding and experience using Microsoft O365 (Admin Center, Exchange, Power Apps, Entra, and Azure) to provide solutions and automation practices to improve workloads.
+Ability to create workflow diagrams to visualize how systems function together.
+Analyze and assess application performance metrics to identify potential areas of improvement.
+Propose and implement solutions to enhance system efficiency and reliability.
+Critically evaluate complex application issues, identify root causes, and implementing robust solutions. Ensure that corrective actions not only resolve the immediate problem but also prevent future occurrences.
+Critically evaluate potential risks associated with application changes or upgrades and suggest strategies to minimize disruptions to business operations.
+Can create step by step documents to assist end users with application navigation and troubleshooting guidelines.
+Strong understanding of security guidelines when implementing any system changes or decision making.
+Can solve L2 end-user escalated hardware, network/VPN, and software service tickets from our Level 1 technical support using our ticket system.
+Can maintain computer inventory with up-to-date changes.
+Qualifications:
+
+Bachelor’s degree in IT, Computer Science, or related field, or equivalent experience.
+Experience and strong knowledge of managing applications and endpoints within O365.
+Preferred experience with the following applications: ClickUp, ConnectWise, FreePBX, Rainforest, KnowBe4 and ChatGPT.
+Able to lift 20-40 pounds.
+4-5 years of industry experience
+Working Conditions:
+
+Fulltime In-office 7am-4pm
+May require travel when needed.
+Weekend Rotation with support staff.
 
 
 <<<<<<< HEAD
